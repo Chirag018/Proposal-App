@@ -1,15 +1,15 @@
 import Link from "next/link";
 import type { NextPage } from "next";
-import { MetaHeader } from "~~/components/MetaHeader";
 
-const Home: NextPage = () => {
+export const NUMBER_REGEX = /^\.?\d+\.?\d*$/;
+
+const HomePage: NextPage = () => {
   return (
     <>
-      <MetaHeader />
       <div className="bg-gray-100 h-screen flex flex-col py-24 items-center">
         <div className="max-w-4xl mx-auto px-6 pt-20 pb-12 text-center">
-          <h1 className="text-5xl font-bold mb-6 text-blue-300">Proposals</h1>
-          <p className="text-lg text-gray-400 mb-10">Funding for showcasing Proof of Work by extending knowledge towards Ethereum</p>
+          <h1 className="text-5xl font-bold mb-6 text-blue-600">Proposals</h1>
+          <p className="text-lg text-gray-700 mb-10">Funding for showcasing Proof of Work by extending knowledge towards Ethereum</p>
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
             <Link
               href="/CreateProposal"
@@ -30,4 +30,4 @@ const Home: NextPage = () => {
   );
 };
 
-export default Home;
+export default HomePage;
